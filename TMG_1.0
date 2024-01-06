@@ -1,0 +1,199 @@
+\documentclass[aspectratio=169,xcolor=svgnames]{beamer} 
+\input{preambles}
+
+% DOCUMENT INFORMATION
+\title[The ECom Game]{The ECom Game}
+\subtitle{(Hvordan skal du tænke some Ecommerce-forretning?)}
+
+
+\author[Mikkel Bjerg]{
+	Af Mikkel Bjerg\supersc{1},
+	En Case fra det virkelige liv\supersc{2,3}
+}
+\institute[]{%
+    \supersc{1}~Mikkel Bjerg, en del af The Marketing Guy \\
+    \supersc{2}~En måde at tage udgangspunkt i de cases vi annoncerer for \\
+    \supersc{3}~Bliver lagt op i vores knowledge-mappe
+}
+\date{2023}
+
+\begin{document}
+
+% TITLE PAGE WITHOUT SIDEBAR
+\begingroup
+\makeatletter
+\setlength{\hoffset}{.5\beamer@sidebarwidth}
+\makeatother
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+\endgroup
+
+% TABLE OF CONTENTS
+\begin{frame}
+\frametitle{Agenda}
+\tableofcontents
+\end{frame}
+
+\section{Intro af Mikkel}
+\begin{frame}{Mikkel sidder på sin stol. Hygger sig.. men så får han et opkald}
+   Det er de kære Mercive-guys som vi snakker så godt med! 
+       \begin{itemize}
+        \item Who dis? - shopify bureau. Vi har dem i vores henvisninger. Arbejder sammen med Arnstedt.
+        \item Videre...
+
+\end{itemize}
+
+   De kære Mercive-guys siger: "Mikkelangelo. We might have a case. But we don't know for sure if you can levitate and scale the business. Here please, take these numbers and get back to us. Let us know what you think - and help us out!" 
+     \(\)\\
+
+\textit{And that ladies and gentlemen is the intro to...}
+   
+\end{frame}
+   
+
+
+\section{The ECom Game}
+
+
+
+\begin{frame}{Vi sidder samlet her. Toppen af DK's markedsføring. Tid til gåden.}
+Gåden handler om Maggie's choice - Hundeforretning. Sælger hundesnacks. 
+\centering
+\includegraphics[scale=0.2]{Maggie.png}
+     \(\)\\
+\end{frame}
+
+
+
+
+
+\begin{frame}{Vi har fået følgende data:}
+\begin{itemize}
+\item Shop data (april):
+
+
+
+\begin{center}
+\begin{tabular}{ c c c }
+ Avg. order value & 332 kr.  \\ 
+ Returning Customer Rate & 55.56 pct. \\  
+ Avg. Margin & 30 pct.  \\ 
+ Antal ordrer & 81    
+\end{tabular}
+\end{center}
+
+     \(\)\\
+\\ 
+\item Meta (FB/IG) data (April):
+\begin{center}
+\begin{tabular}{ c c c }
+Pris pr. køb & 216-235 kr.  \\ 
+ROAS gns. Ad Account & 1.75 \\ 
+Avg. Order value & 426.2 kr.\\ 
+CPC & 2.11 kr.  \\     
+Totale køb & 25 stk.  \\     
+Total Spend & 6095 kr.  \\     
+Total Rev. & 10.655 kr.  \\     
+\end{tabular}
+\end{center}
+
+
+\end{itemize}
+   
+\end{frame}
+
+
+
+
+\begin{frame}{Bonus info}
+\begin{itemize}
+    \item De gør mange ting rigtigt. \\
+\end{itemize}
+\begin{itemize}
+    \begin{itemize}
+        \item De har kørt nogle kreativer med hunde samt nogle founder videoer  \\
+        \item De har også noget Adv.+ og testet nogle forskellige ting af.
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item  Vi kan godt udfordre content og teknisk setup og skubbe resultaterne lidt mere.   \(\)\\
+\end{itemize}
+\begin{itemize}
+
+\end{itemize}
+\textbf{Hovedessensen: Vi kan muligvis skubbe lidt med performance. Men det tidligere setup har været ok.}
+     \(\)\\
+\end{frame}
+
+
+
+
+
+\begin{frame}{Hvad vil I gøre her?}
+\begin{itemize}
+    \item Vil I anbefale, at Maggies Choice skal bruge flere penge på markedsføring? \\
+\end{itemize}
+\begin{itemize}
+    \item Er der en god idé, at The Marketing Guy skal tage casen? \\
+\end{itemize}
+\begin{itemize}
+    \item Hvad er det for et spørgsmål vi skal stille os selv her?   \(\)\\
+\end{itemize}
+
+     \(\)\\
+\end{frame}
+
+
+\section{Lad os prøve at forstå the mechanics}
+
+\begin{frame}{Hvad er det store spørgsmål?}
+
+\centering
+Vi skal stille os selv spørgsmålet: \\
+Hvad er kausaliteten mellem spend og salg?
+\end{frame}
+
+
+
+\begin{frame}{En model kunne se således ud:}
+
+\begin{align}
+    E(r_Ads) = Spend_P \cdot \beta_i + Spend_Re \cdot \beta_j
+    \end{align}
+    \(E(r_Ads) = Forventet \ afkast\) \\
+    \(Spend = Facebook \ Ads \ Spend\)\\
+    \(\beta_i_+_j = Korrelation/ROAS. \ Den \ spændende \ (i \ know \ Corr \ er\  ikke\  lig\  Kaus)\)\\
+     \(\)\\
+    Dette kunne godt være en normal model? Er der noget vi glemmer?\\
+
+\end{frame}
+
+
+\begin{frame}{Model 2:}
+
+\begin{align}
+    E(r_Ads) = Spend_P \cdot \beta_i + Spend_Re \cdot \beta_j + ReturCustom_i_-_k \cdot Rip_i_-_k
+    \end{align}
+    \(E(r_Ads) = Forventet \ afkast\) \\
+    \(Spend = Facebook \ Ads \ Spend\)\\
+    \(\beta_i_+_j = Korrelation/ROAS. \ Den \ spændende \ (i \ know \ Corr \ er\  ikke\  lig\  Kaus)\)\\
+    \(ReturCustom_i_-_k = \ nye \ potentielle \ genererede \ kunder \ fra \ tidligere \ perioder \)\\
+    \(Rip_i_-_k = \ Rippling \ effect. \ Andel \ der \ faktisk \ konverterer. \)\\
+     \(\)\\
+    Idéen bag: Mange ser på nu-og-her-billedet. Men den akkumulerede værdi fra tidligere kunder, der bidrager til vækst i senere perioder + bedre retargeting skal også huskes. \\
+
+\end{frame}
+
+
+\section{The way to excellence}
+
+\begin{frame}{Vi skal til til Excel.}
+\centering
+Velkommen til MBJ's nye sheet! 
+
+\end{frame}
+
+
+
+\end{document}
